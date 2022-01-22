@@ -1,4 +1,4 @@
-package com.annakhuseinova.springwebfluxcaching.controller;
+package com.annakhuseinova.springwebfluxcaching.fib.controller;
 
 import com.annakhuseinova.springwebfluxcaching.fib.service.FibService;
 import org.springframework.beans.factory.annotation.Autowired;

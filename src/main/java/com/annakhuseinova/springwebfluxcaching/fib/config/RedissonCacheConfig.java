@@ -1,4 +1,4 @@
-package com.annakhuseinova.springwebfluxcaching.config;
+package com.annakhuseinova.springwebfluxcaching.fib.config;
 
 import org.redisson.api.RedissonClient;
 import org.redisson.spring.cache.RedissonSpringCacheManager;
