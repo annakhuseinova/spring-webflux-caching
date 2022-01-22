@@ -23,6 +23,11 @@ public class FibService {
         System.out.println("clearing hash key: " + index);
     }
 
+    /**
+     * fixedRate - new task will be launched at a fixed rate even if the previous one is still running
+     * fixedDelay - new task will be launched only after the previous one has ended. So that there is a solid
+     * delay between tasks
+     * */
     @Scheduled(fixedRate = 10000)
     @CacheEvict(value = "math:fib", allEntries = true)
     public void clearCache(){
