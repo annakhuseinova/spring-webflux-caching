@@ -1,12 +1,14 @@
 package com.annakhuseinova.springwebfluxcaching.fib.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FibService {
 
-    public int getFib(int index){
-        System.out.println("Calculating fib for" + index);
+    @Cacheable("math:fib")
+    public int getFib(int index, String name){
+        System.out.println("Calculating fib for " + index + ", name: " + name);
         return this.fib(index);
     }
 
