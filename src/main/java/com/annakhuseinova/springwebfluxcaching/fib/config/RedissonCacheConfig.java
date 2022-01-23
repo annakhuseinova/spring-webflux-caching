@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RedissonCacheConfig {
 
+    /**
+     * Otherwise Spring Cache will configure ConcurrentHashMapCacheManager
+     * */
     @Bean
     public CacheManager cacheManager(RedissonClient redissonClient){
         return new RedissonSpringCacheManager(redissonClient);
